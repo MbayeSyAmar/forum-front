@@ -1,0 +1,82 @@
+/* Style de la barre latérale */
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    color: #000;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item span {
+    font-size: 16px;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+  
+  /* Effet de survol pour le texte et l'icône */
+  .nav-item:hover .icon,
+  .nav-item:hover span {
+    color: #fff;
+  }
+  
+  /* Pseudo-élément pour l'effet de fond animé */
+  .nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 30px; /* Taille initiale autour de l'icône */
+    background-color: #2980b9;
+    border-radius: 20px; /* Arrondi pour entourer l'icône */
+    transition: all 0.4s ease;
+    z-index: 0;
+    transform: scaleX(0); /* Masqué au départ */
+    transform-origin: left; /* L'effet démarre de la gauche */
+  }
+  
+  .nav-item:hover::before {
+    transform: scaleX(1); /* S'agrandit pour couvrir l'icône et le texte */
+    width: 100%; /* Élargit le fond pour couvrir toute la largeur */
+    border-radius: 20px; /* Arrondi général lors de l'extension */
+  }
+  
+  /* Animation de transition en 3 étapes */
+  .nav-item:hover .icon {
+    animation: expand-icon 0.4s ease forwards;
+  }
+  
+  @keyframes expand-icon {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Légère extension autour de l'icône */
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

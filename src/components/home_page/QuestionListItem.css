@@ -1,0 +1,217 @@
+/* General Styles */
+.question-list-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Question Stats */
+.question-stats {
+  gap: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Question Content */
+.question-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.question-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Question Interactions */
+.question-interactions {
+  margin-top: 15px;
+  gap: 20px;
+  color: #555;
+}
+
+.question-interactions span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.icon {
+  margin-right: 5px;
+  color: #000;
+  font-size: 16px;
+}
+
+.question-interactions span:hover {
+  color: #ac0000;
+}
+
+/* Editor Container */
+.ql-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Show More/Less Buttons */
+.show-more-btn, .show-less-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.show-more-btn:hover, .show-less-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Comments Section */
+.comments-section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Individual Comment */
+.comment {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.comment:hover {
+  transform: translateY(-5px);
+}
+
+.comment p {
+  font-size: 16px;
+  color: #333;
+}
+
+.comment small {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Comment Form */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.comment-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.comment-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.comment-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .question-list-item {
+    padding: 10px;
+  }
+
+  .question-content h2 {
+    font-size: 16px;
+  }
+
+  .question-content p {
+    font-size: 14px;
+  }
+
+  .comment p {
+    font-size: 14px;
+  }
+
+  .comment-form input,
+  .comment-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .show-more-btn, .show-less-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .comments-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-list-item {
+    padding: 8px;
+  }
+
+  .question-content h2 {
+    font-size: 14px;
+  }
+
+  .question-content p {
+    font-size: 13px;
+  }
+
+  .comment p {
+    font-size: 13px;
+  }
+
+  .comment-form input,
+  .comment-form button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .show-more-btn, .show-less-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .comments-section {
+    padding: 10px;
+  }
+}
